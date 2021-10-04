@@ -4,7 +4,7 @@ const city = 'London';
 async function callApi() {
   const res = await fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + APPID);
   const weather = await res.json();
-  console.log(weather);
+  console.log(weather.weather[0].main);
 }
 
 callApi();
