@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<p>
+<label>名前：<input type="text" id="nametext"></label>
+</p>
+
+<p>
+<form>
+  <div>
+    <label>勤務地：
+        <select name = "address" id="address">
+        <option value="" selected>選択してください</option>
+        <option value="tokyo">東京都</option>
+        <option value="osaka">大阪府</option>
+        <option value="kanagawa">神奈川県</option>
+        </select>
+    </label>
+  </div>
+</form>
+</p>
+
+<p>
+<input type="radio" id="sales" name="div" value="sales" checked>
+<label for="sales">営業</label><br>
+<input type="radio" id="develop" name="div" value="develop">
+<label for="develop">開発</label><br>
+<input type="radio" id="human" name="div" value="human">
+<label for="human">人事</label><br>
+</p>
+
+<script src="sample.js"></script>
+
+</body>
+</html>
