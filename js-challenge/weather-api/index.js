@@ -14,7 +14,6 @@ window.onload = function () {
   async function execute() {
     const newWeatherText = await fetchWeather();
     changeWetherText(newWeatherText);
-    console.log("都市名：" + city.value + "　天気：" + newWeatherText);
   }
 
   /**
