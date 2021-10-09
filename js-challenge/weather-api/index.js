@@ -12,7 +12,7 @@ window.onload = function () {
    * 天気情報を取得してhtmlの書き換えを行います
    */
   async function execute() {
-    const newWeatherText = await fetchWeather();
+    const newWeatherText = await fetchWeatherText();
     changeWetherText(newWeatherText);
   }
 
@@ -20,7 +20,7 @@ window.onload = function () {
    * 天気情報APIを呼び出し、選択された都市の天気情報を返します
    * @returns {string} 天気情報
    */
-  async function fetchWeather() {
+  async function fetchWeatherText() {
     try {
       const url = new URL('https://api.openweathermap.org/data/2.5/weather');
       url.searchParams.set('q', city.value);
