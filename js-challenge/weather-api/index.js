@@ -22,12 +22,10 @@ window.onload = function () {
    */
   async function fetchWeather() {
     try {
-      const res = await fetch(
-        "https://api.openweathermap.org/data/2.5/weather?q=" +
-          city.value +
-          "&appid=" +
-          APPID
-      );
+      const url = new URL('https://api.openweathermap.org/data/2.5/weather');
+      url.searchParams.set('q', city.value);
+      url.searchParams.set('appid', APPID);
+      const res = await fetch(url);
       const weatherInfo = await res.json();
       const weather = weatherInfo.weather[0].main;
       return weather;
