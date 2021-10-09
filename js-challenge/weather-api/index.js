@@ -13,7 +13,10 @@ window.onload = function () {
    */
   async function execute() {
     const newWeatherText = await fetchWeatherText();
-    changeWetherText(newWeatherText);
+    //nullチェック
+    if (newWeatherText) {
+      changeWetherText(newWeatherText);      
+    }
   }
 
   /**
